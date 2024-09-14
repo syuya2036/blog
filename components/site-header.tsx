@@ -3,8 +3,9 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Icons } from "./icon";
 import { MainNav } from "./main-nav";
-import { buttonVariants } from "./ui/button";
 import { MobileNav } from "./mobile-nav";
+import { buttonVariants } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
 
 export function SiteHeader() {
   return (
@@ -39,6 +40,7 @@ export function SiteHeader() {
                 <span className="sr-only">X</span>
               </div>
             </Link>
+            <ModeToggle />
             <MobileNav />
           </nav>
         </div>

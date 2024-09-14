@@ -2,9 +2,9 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Icons } from "./icon";
-import { buttonVariants } from "./ui/button";
 import { MainNav } from "./main-nav";
-
+import { buttonVariants } from "./ui/button";
+import { MobileNav } from "./mobile-nav";
 
 export function SiteHeader() {
   return (
@@ -21,7 +21,7 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  "w-10 px-0"
+                  "w-10 px-0 hidden sm:inline-flex"
                 )}
               >
                 <Icons.gitHub className="h-4 w-4" />
@@ -32,13 +32,14 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  "w-10 px-0"
+                  "w-10 px-0 hidden sm:inline-flex"
                 )}
               >
                 <Icons.twitter className="h-4 w-4" />
                 <span className="sr-only">X</span>
               </div>
             </Link>
+            <MobileNav />
           </nav>
         </div>
       </div>

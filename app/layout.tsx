@@ -1,6 +1,7 @@
 import { Providers } from "@/components/providers";
 import { SiteHeader } from "@/components/site-header";
 import { cn } from "@/lib/utils";
+import "@/styles/mdx.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -18,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" className="scroll-pt-[3.5rem]">
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",

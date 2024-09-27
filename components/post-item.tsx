@@ -1,8 +1,6 @@
-import { cn } from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
 import { Calendar } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
-import { formatDate } from "@/lib/utils";
 
 interface PostItemProos {
   slug: string;
@@ -15,11 +13,13 @@ export function PostItem({ slug, title, description, date }: PostItemProos) {
   return (
     <article className="flex flex-col gap-2 border-border border-b py-3">
       <div>
-        <h2 className="text-2xl font bold">
+        <h2 className="text-2xl font-bold">
           <Link href={slug}>{title}</Link>
         </h2>
       </div>
-      <div className="max-w-none text-muted-foreground">{description}</div>
+      <div className="max-w-none text-muted-foreground">
+        <Link href={slug}>{description}</Link>
+      </div>
       <div className="flex justify-between items-center">
         <dl>
           <dt className="sr-only">公開日</dt>
@@ -28,12 +28,6 @@ export function PostItem({ slug, title, description, date }: PostItemProos) {
             <time dateTime={date}>{formatDate(date)}</time>
           </dd>
         </dl>
-        <Link
-          href={slug}
-          className={cn(buttonVariants({ variant: "link" }), "py-0")}
-        >
-          Read More
-        </Link>
       </div>
     </article>
   );

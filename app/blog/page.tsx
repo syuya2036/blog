@@ -25,7 +25,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <div className="flex flex-col item-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
           <h1 className="inline-block font-black text-4xl lg:text-5xl">Blog</h1>
-          <p className="text-xl text-muted-foreground">Welcome to the blog.</p>
+          <p className="text-xl text-muted-foreground">
+            Welcome to the my blog.
+          </p>
         </div>
       </div>
       <hr className="mt-8" />

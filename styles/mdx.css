@@ -36,8 +36,5 @@
 
 .subheading-anchor {
   @apply no-underline hover:underline;
-}
-
-.subheading-anchor {
-  @apply no-underline hover:underline;
+  @apply font-bold;
 }

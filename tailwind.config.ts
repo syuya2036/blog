@@ -17,6 +17,21 @@ const config: Config = {
 			},
 		},
 		extend: {
+			typography: () => ({
+				DEFAULT: {
+					css: {
+						h1: {
+							fontWeight: 800,
+						},
+						h2: {
+							fontWeight: 800,
+						},
+						h3: {
+							fontWeight: 800,
+						},
+					},
+				},
+			}),
 			fontFamily: {
 				sans: ['var(--font-sans)', ...fontFamily.sans],
 				serif: ['var(--font-serif)', ...fontFamily.serif],

@@ -1,6 +1,4 @@
 import { build } from "velite";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
 
 /** @type {import('next').NextConfig} */
 export default {

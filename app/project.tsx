@@ -6,13 +6,14 @@ import { Typography } from "@material-tailwind/react";
 const PROJECTS = [
   {
     img: "/images/project-1.jpg",
-    title: "Go言語バックエンドインターン",
-    desc: "株式会社オプティムでGo言語を使ったバックエンド開発のインターンを行いました。",
+    title: "Go Language Backend Internship",
+    desc: "I interned at OPTiM Corporation for backend development using Go language.",
   },
   {
     img: "/images/project-2.jpg",
-    title: "高専プロコン 全国大会",
-    desc: "第35回高専プロコンの競技部門で全国大会に出場しました。",
+    title:
+      "National Competition of the National Institute of Technology Programming Contest",
+    desc: "We participated in the national competition in the competitive category of the 35th Kosen Programming Contest.",
   },
 ];
 
@@ -27,7 +28,7 @@ export function Projects() {
           variant="lead"
           className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12"
         >
-          これまでのプロジェクトを紹介します。
+          Introduction of Previous Projects
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">

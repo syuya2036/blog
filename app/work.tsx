@@ -8,8 +8,10 @@ const ORGANIZATIONS = [
     role: "Lead Engineer",
     description: (
       <>
-        一関高専発ITベンチャーとして先端技術と豊かな発想力を生かし、東北のIT化を進めています。
-        主にIT技術を用いた地域企業の課題解決 に取り組んでいます。
+        As an IT venture from &quot;National Institute of Technology, Ichinoseki
+        College&quot;, we are promoting IT in Tohoku by utilizing cutting-edge
+        technology and abundant creativity. The company is mainly engaged in
+        solving problems of local companies using IT technology.
       </>
     ),
     url: "https://site.imanect.com",
@@ -19,7 +21,8 @@ const ORGANIZATIONS = [
     role: "Engineer",
     description: (
       <>
-        Web制作サービス、データを駆使したマーケティング支援、AIアプリケーションサービスを提供し、技術を駆使してお客様を支援しています。
+        We provide web production services, data-driven marketing support, and
+        AI application services to assist our clients with technology.
       </>
     ),
     url: "https://www.atlas-online.space",
@@ -29,8 +32,10 @@ const ORGANIZATIONS = [
     role: "Student",
     description: (
       <>
-        一関高専の情報・ソフトウェア系に所属し、暗号理論の研究を行っています。
-        システム研究部に所属し、さまざまなプロジェクトに参加しています。
+        I belong to the Division of Computer Engineering and Informatics of
+        National Institute of Technology, Ichinoseki College, where I conduct
+        research on cryptography theory. I belong to the Systems Research
+        Department and participate in various projects.
       </>
     ),
     url: "https://www.ichinoseki.ac.jp",
@@ -51,23 +56,28 @@ export default function Work() {
         </div>
         <div className="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {ORGANIZATIONS.map((organization, idx) => (
-            <div className="space-y-4" key={idx}>
-              <span
-                className={cn(
-                  " text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded  ",
-                  idx === 2
-                    ? "bg-sky-400"
-                    : "bg-gray-100 dark:bg-gray-700 dark:text-gray-300"
-                )}
-              >
-                {organization.name}
-              </span>
-              <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                {organization.role}
-              </h3>
-              <p className="text-base break-normal font-all text-gray-500 dark:text-gray-400">
-                {organization.description}
-              </p>
+            <div
+              className="space-y-4 flex flex-col items-center justify-between"
+              key={idx}
+            >
+              <div>
+                <span
+                  className={cn(
+                    " text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded",
+                    idx === 2
+                      ? "bg-sky-400"
+                      : "bg-gray-100 dark:bg-gray-700 dark:text-gray-300"
+                  )}
+                >
+                  {organization.name}
+                </span>
+                <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white my-4">
+                  {organization.role}
+                </h3>
+                <p className="text-base break-normal font-all text-gray-500 dark:text-gray-400">
+                  {organization.description}
+                </p>
+              </div>
               <Button asChild size="sm">
                 <Link
                   href={organization.url}

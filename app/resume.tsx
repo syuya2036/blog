@@ -1,6 +1,6 @@
 "use client";
 
-import { ResumeItem } from "@/components/resume-item";
+import ResumeItem from "@/components/resume-item";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@material-tailwind/react";
 import ComputerIcon from "@mui/icons-material/Computer";
@@ -9,16 +9,21 @@ import SchoolIcon from "@mui/icons-material/School";
 
 const RESUME_ITEMS = [
   {
-    icon: <ComputerIcon  />,
-    children: "一関工業高等専門学校 情報・ソフトウェア系 5年",
-  },
-  {
-    icon: <SchoolIcon />,
-    children: "新潟大学 理学部 理学科 数学プログラム 進学予定",
+    icon: <ComputerIcon />,
+    date: "April 2020",
+    children:
+      "Division of Computer Engineering and Informatics of National Institute of Technology, Ichinoseki College 5th Grade",
   },
   {
     icon: <PsychologyIcon />,
-    children: "機械学習・最適化理論 勉強中",
+    date: "Now",
+    children: "Studying Machine Learning and Optimization Theory.",
+  },
+  {
+    icon: <SchoolIcon />,
+    date: "April 2025 (Expected)",
+    children:
+      "Intended Enrollment in the Mathematics Program, Faculty of Science, Niigata University",
   },
 ];
 
@@ -31,8 +36,10 @@ export function Resume() {
             My Resume
           </Typography>
           <Typography className="mb-4 mt-3 w-9/12 font-normal !text-gray-500">
-            私は高専の情報系でコンピュータサイエンスを学びました。
-            そこで機械学習や最適化理論の数学的側面に惹かれ、新潟大学の数学科に進学する予定です。
+            I studied computer science at a technical college of information
+            science. There I was attracted to the mathematical aspects of
+            machine learning and optimization theory, and I plan to enter the
+            mathematics department at Niigata University.
           </Typography>
           <Button asChild variant="outline">
             <a href="mailto:shuya@yantan.dev?subject=YantanTechからお問い合せ">
@@ -40,11 +47,19 @@ export function Resume() {
             </a>
           </Button>
         </div>
-        <div className="col-span-1 grid gap-y-6 lg:ml-auto pr-0 lg:pr-12 xl:pr-32">
+        <ol className="relative border-s border-gray-200 dark:border-gray-700">
           {RESUME_ITEMS.map((props, idx) => (
-            <ResumeItem key={idx} {...props} />
+            <li key={idx} className="mb-10 ms-4">
+              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                {props.date}
+              </time>
+              <div className="mt-5">
+                <ResumeItem key={idx} {...props} />
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

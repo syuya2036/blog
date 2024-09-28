@@ -17,6 +17,15 @@ const config: Config = {
 			},
 		},
 		extend: {
+			keyframes: {
+				scroll: {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-100%)' },
+				},
+			},
+			animation: {
+				'scroll-infinity': 'scroll 25s linear infinite',
+			},
 			typography: () => ({
 				DEFAULT: {
 					css: {

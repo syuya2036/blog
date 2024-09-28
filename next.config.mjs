@@ -7,6 +7,15 @@ export default {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;
   },
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'skillicons.dev',
+      },
+    ],
+  },
 };
 
 class VeliteWebpackPlugin {

@@ -12,7 +12,7 @@ export default function Projects() {
         description="student and developer."
         body="I'm sutdent of National Institute of Technology, Ichinoseki College."
       ></Hero>
-      <hr className="mt-8" />
+      <hr className="" />
       <Work></Work>
       <hr className="mt-8" />
       <Project></Project>

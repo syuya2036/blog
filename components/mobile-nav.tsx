@@ -20,7 +20,7 @@ export function MobileNav() {
           <span className="sr-only">Toggle Theme</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right">
+      <SheetContent side="right" className="w-full">
         <MobileLink
           href="/"
           className="flex items-center"

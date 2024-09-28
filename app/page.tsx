@@ -14,7 +14,7 @@ export default function Projects() {
       ></Hero>
       <hr className="" />
       <Work></Work>
-      <hr className="mt-8" />
+      <hr className="" />
       <Project></Project>
       <hr className="" />
       <Resume></Resume>

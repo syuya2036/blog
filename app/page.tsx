@@ -12,13 +12,13 @@ export default function Projects() {
         description="student and developer."
         body="I'm sutdent of National Institute of Technology, Ichinoseki College."
       ></Hero>
-      <hr className="" />
+      <hr />
       <Work></Work>
-      <hr className="" />
+      <hr />
       <Project></Project>
-      <hr className="" />
+      <hr />
       <Resume></Resume>
-      <hr className="mt-8" />
+      <hr />
       <Flow></Flow>
     </div>
   );

@@ -33,7 +33,6 @@ export function Resume() {
           <Typography className="mb-4 mt-3 w-9/12 font-normal !text-gray-500">
             私は高専の情報系でコンピュータサイエンスを学びました。
             そこで機械学習や最適化理論の数学的側面に惹かれ、新潟大学の数学科に進学する予定です。
-            将来はデータサイエンティストやアルゴリズムエンジニアになることを目指しています。
           </Typography>
           <Button asChild variant="outline">
             <a href="mailto:shuya@yantan.dev?subject=YantanTechからお問い合せ">

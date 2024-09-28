@@ -12,7 +12,7 @@ interface HeroProps {
 
 export default function Hero({ title, description, body }: HeroProps) {
   return (
-    <div className="hero text-center h-[70vh] flex flex-col flex-center justify-center ">
+    <div className="hero text-center h-[80vh] flex flex-col flex-center justify-center ">
       <h1 className="text-5xl md:text-7xl font-bold mb-6">{title}</h1>
       <p className="text-xl md:text-2xl mb-4">{description}</p>
       <p className="text-gray-400 mb-6">{body}</p>

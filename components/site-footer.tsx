@@ -1,21 +1,38 @@
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
+
 export default function SiteFooter() {
   return (
-    <footer className="w-full py-8 text-center">
-      <div className="container mx-auto">
+    <footer className="w-full text-center">
+      <hr className="" />
+      <div className="container mx-auto my-8">
         <div className="mb-2">
-          <a href="#" className="text-gray-400 mx-2 hover:text-white">
-            Twitter
-          </a>
-          <a href="#" className="text-gray-400 mx-2 hover:text-white">
+          <Link
+            href={siteConfig.links.github}
+            className="mx-2 transition-colors hover:text-primary text-foreground/60"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </Link>
+          <Link
+            href={siteConfig.links.X}
+            className="mx-2 transition-colors hover:text-primary text-foreground/60"
+            target="_blank"
+            rel="noreferrer"
+          >
+            X
+          </Link>
+          <Link
+            href={siteConfig.links.instagram}
+            className="mx-2 transition-colors hover:text-primary text-foreground/60"
+            target="_blank"
+            rel="noreferrer"
+          >
             Instagram
-          </a>
-          <a href="#" className="text-gray-400 mx-2 hover:text-white">
-            Facebook
-          </a>
+          </Link>
         </div>
-        <p className="text-gray-500 text-sm">
-          &copy; 2024 MyCompany. All rights reserved.
-        </p>
+        <p className="text-sm">&copy; 2024 - Yantan Tech.</p>
       </div>
     </footer>
   );

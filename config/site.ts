@@ -6,7 +6,9 @@ export const siteConfig = {
   links: {
     github: "https://github.com/syuya2036",
     X: "https://x.com/SyuYa_0o0_",
-    personalSite: "https://yantan.dev"
+    instagram: "https://www.instagram.com/syuya_0o0_/",
+    personalSite: "https://www.yantan.dev",
+    techBlog: "https://www.yantan.dev/blog",
   }
 }
 

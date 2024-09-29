@@ -1,5 +1,6 @@
 import { posts } from "#site/content";
 import { MDXComponent } from "@/components/mdx-component";
+import "@/styles/toc.css";
 import "katex/dist/katex.min.css";
 import { notFound } from "next/navigation";
 
@@ -36,7 +37,7 @@ export default async function PostPage({ params }: PostPageProps) {
       {post.description ? (
         <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
       ) : null}
-      <hr className="my-4" />
+      {/* <hr className="my-4" /> */}
       <MDXComponent code={post.body} />
     </article>
   );

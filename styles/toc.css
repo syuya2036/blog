@@ -1,0 +1,33 @@
+.toc {
+  margin-bottom: 4rem;
+  padding: 1rem 2rem;
+  border: 1px solid rgb(229, 231, 235);
+}
+
+.toc::before {
+  content: "目次";
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* 768以上で */
+@media (min-width: 768px) {
+  .toc {
+    margin-top: 4rem;
+  }
+}
+
+.toc-list {
+  cursor: pointer;
+  list-style: square;
+}
+
+.toc-link {
+  text-decoration: none;
+}
+
+.toc-link:hover {
+  opacity: 0.5;
+}

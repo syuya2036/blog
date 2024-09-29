@@ -1,7 +1,8 @@
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeKatex from 'rehype-katex';
-import rehypePrettyCode from 'rehype-pretty-code';
-import rehypeSlug from 'rehype-slug';
+import rehypeToc from '@jsdevtools/rehype-toc';
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeKatex from "rehype-katex";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeSlug from "rehype-slug";
 import remarkMath from 'remark-math';
 import { defineCollection, defineConfig, s } from "velite";
 
@@ -34,17 +35,26 @@ export default defineConfig({
 	},
 	collections: { posts },
 	mdx: {
-		rehypePlugins: [rehypeKatex, [rehypePrettyCode, {
-			theme: "github-dark",
-		}], rehypeSlug, [rehypeAutolinkHeadings, {
-			behavior: "wrap",
-			properties: {
-				className: ["subheading-anchor"],
-			},
-			ariaLabel: "Link to section",
-		}
-			]
+		rehypePlugins: [
+			rehypeKatex,
+			[rehypePrettyCode, {
+				theme: "github-dark",
+			}], rehypeSlug, [rehypeAutolinkHeadings, {
+				behavior: "wrap",
+				properties: {
+					className: ["subheading-anchor"],
+				},
+				ariaLabel: "Link to section",
+			}
+			],
+			[rehypeToc, {
+				cssClasses: {
+					toc: "toc",
+					link: "toc-link",
+					list: "toc-list",
+				}
+			}]
 		],
-		remarkPlugins: [remarkMath],
+		remarkPlugins: [remarkMath,],
 	},
 });
